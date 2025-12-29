@@ -95,9 +95,17 @@
       font-weight: 600;
     }
 
-    /* SKILLS SECTION */
-    #skills {
-      padding: 100px 0;
+    /* SKILLS SECTION - MOBILE FRIENDLY */
+    .skill-item {
+      padding: 30px 20px;
+      transition: transform 0.3s ease;
+      height: 100%;
+      background-color: #fff; /* White background for definition */
+      border-radius: 15px;
+    }
+
+    .skill-item:hover {
+      transform: translateY(-5px);
     }
 
     .skill-item img {
@@ -107,32 +115,95 @@
       margin-bottom: 1.5rem;
     }
 
-    /* CONTACT SECTION */
+    .skill-item h5 {
+      color: #c5a3d2;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .skill-item p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #333;
+      margin-bottom: 0;
+    }
+
+    /* Subtle divider for mobile only */
+    @media (max-width: 767px) {
+      .skill-column:not(:last-child) {
+        border-bottom: 1px solid #f8e4ff;
+        padding-bottom: 20px;
+      }
+    }
+
+    /* FOOTER / CONTACT SECTION */
     #contact {
       background-color: #f8e4ff;
       padding: 80px 0;
+      margin-top: 50px; /* Optional: adds space from the skills section */
+    }
+
+    #contact h2 {
+      font-weight: 800;
+      color: #c5a3d2;
+      margin-bottom: 3rem;
+    }
+
+    .contact-info {
+      color: #7a5a8f; /* Slightly darker for better readability */
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    .social-icons {
+      margin-top: 2rem;
+    }
+
+    .social-icons a {
+      text-decoration: none;
+      transition: transform 0.2s ease;
+      display: inline-block;
+    }
+
+    .social-icons a:hover {
+      transform: translateY(-5px);
     }
 
     .social-icon {
-      width: 60px;
-      height: 60px;
+      width: 70px;
+      height: 70px;
       background-color: #c5a3d2;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 10px;
-      transition: background-color 0.3s;
+      margin: 0 auto 0.75rem;
+      transition: background-color 0.3s ease;
     }
 
-    .social-icon:hover {
+    .social-icons a:hover .social-icon {
       background-color: #a57bb8;
     }
 
     .social-icon img {
-      width: 28px;
-      height: 28px;
-      filter: brightness(0) invert(1); /* Makes black icons white */
+      width: 32px;
+      height: 32px;
+    }
+
+    .social-label {
+      color: #c5a3d2;
+      font-weight: 600;
+    }
+
+    /* Mobile Adjustments */
+    @media (max-width: 576px) {
+      .contact-info {
+        font-size: 1rem;
+      }
+      .social-icon {
+        width: 60px;
+        height: 60px;
+      }
     }
 
     /* UTILITIES */
@@ -143,6 +214,7 @@
 </head>
 
 <body>
+  <!-- NAVIGATION BAR -->
   <nav class="navbar navbar-expand-lg fixed-top custom-navbar shadow-sm">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#">Fiorella Trigo</a>
@@ -170,39 +242,59 @@
     </div>
   </nav>
 
+  <!-- ABOUT SECTION -->
   <section id="about">
     <div class="container text-center">
+      <!-- Title -->
       <h2 class="display-4 mb-5">About me</h2>
+      <!-- Image -->
       <div class="mb-5">
         <img src="images/about/1.png" alt="Fiorella Trigo" class="about-image rounded-circle img-fluid">
       </div>
+      <!-- Text -->
       <div class="row justify-content-center">
         <div class="col-lg-8 about-text">
-          <p>I’m a Junior Data Scientist with hands-on training in data analysis, statistics, and exploratory data analysis...</p>
-          <p>My background is non-traditional and international, which has shaped how I work...</p>
+          <p>
+            I’m a Junior Data Scientist with hands-on training in data analysis, statistics, and exploratory data analysis, working on end-to-end projects using Python (pandas, NumPy) and real-world datasets. I enjoy structuring messy data, identifying patterns, and turning analysis into clear, actionable insights.
+          </p>
+          <p>
+            My background is non-traditional and international, which has shaped how I work: I possess strong analytical thinking, am highly adaptable, pay close attention to detail, and have the ability to work autonomously in remote, multicultural environments. I learn best by solving real problems and iterating through data-driven workflows.
+          </p>
+          <p>
+            When I’m not diving deeper into Data Science, you’ll probably find me marathon-reading romance or fantasy books, teaching English, or spending time outdoors. Those spaces keep me curious, focused, and grounded.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Section Title -->
   <section id="projects">
     <div class="container text-center">
       <h2 class="display-4 fw-bold mb-5">Projects</h2>
+      <!-- Projects Grid -->
       <div class="row g-4 justify-content-center">
 
+        <!-- Project 1 -->
         <div class="col-md-6 col-lg-5">
           <div class="card project-card h-100">
             <img src="images/projects/1.png" class="card-img-top" alt="Video Game Analysis">
             <div class="card-body d-flex flex-column">
-              <h5 class="card-title fw-bold">Video Game Industry Analysis</h5>
-              <p class="card-text flex-grow-1">Strategic insights for 2017 using Python (Pandas, Matplotlib) to identify market success patterns.</p>
+              <h5 class="card-title fw-bold">Video Game Industry Analysis: Strategic Insights for 2017</h5>
+              <p class="card-text flex-grow-1">
+                This project performs a comprehensive data analysis for the online store Ice, which 
+              sells video games globally. The primary objective is to identify patterns that 
+              determine whether a game will be successful or not, enabling the store to plan its 
+              advertising budget and strategic inventory for the upcoming year (2017).
+              </p>
               <div class="project-links mt-3">
-                <a href="https://github.com/..." target="_blank" class="btn btn-outline-primary btn-sm">GitHub Repo</a>
+                <a href="https://github.com/fiorellatrigo/video_game_market_analysis_2017/blob/main/README.md" target="_blank" class="btn btn-outline-primary btn-sm">GitHub Repo</a>
               </div>
             </div>
           </div>
         </div>
 
+        <!-- Project 2 placeholder -->
         <div class="col-md-6 col-lg-5 coming-soon">
           <div class="card project-card h-100">
             <div class="card-body">
@@ -215,35 +307,98 @@
     </div>
   </section>
 
-  <section id="skills">
-    <div class="container text-center">
-      <h2 class="display-4 fw-bold mb-5">Skills</h2>
-      <div class="row g-4">
-        <div class="col-6 col-lg-3">
-          <div class="skill-item">
-            <img src="images/skills/1.png" alt="Python">
-            <h5>Python</h5>
-          </div>
+ <section id="skills" class="py-5">
+  <div class="container text-center">
+
+    <h2 class="display-4 fw-bold mb-5">Skills</h2>
+
+    <div class="row g-5 justify-content-center">
+
+      <div class="col-12 col-md-6 col-lg-3 skill-column">
+        <div class="skill-item">
+          <img src="images/skills/1.png" alt="Python icon" class="img-fluid">
+          <h5>Python</h5>
+          <p>
+            I use Python to clean, analyze, and explore data efficiently. I’m comfortable working with libraries like 
+            pandas and NumPy, writing clear scripts, and turning raw datasets into structured, usable information for analysis.
+          </p>
         </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3 skill-column">
+        <div class="skill-item">
+          <img src="images/skills/2.png" alt="Data Visualization icon" class="img-fluid">
+          <h5>Data Visualization</h5>
+          <p>
+            I create clear and meaningful visualizations that help data tell a story. I use charts and dashboards 
+            to highlight patterns, trends, and insights, making complex information easy to understand for both 
+            technical and non-technical audiences.
+          </p>
         </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3 skill-column">
+        <div class="skill-item">
+          <img src="images/skills/3.png" alt="SQL icon" class="img-fluid">
+          <h5>SQL</h5>
+          <p>
+            I use SQL to query, filter, and aggregate data from relational databases. I’m confident writing joins,
+            subqueries, and grouped analyses to extract exactly the data needed for exploration and decision-making.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3 skill-column">
+        <div class="skill-item">
+          <img src="images/skills/4.png" alt="Data Storytelling icon" class="img-fluid">
+          <h5>Data Storytelling</h5>
+          <p>
+            I focus on explaining insights in a clear and engaging way. I translate data results into 
+            narratives that answer real questions, support decisions, and connect numbers to real-world context.
+          </p>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
   <footer id="contact">
     <div class="container text-center">
-      <h2 class="display-4 mb-5">Contact Me</h2>
-      <div class="row justify-content-center mb-5">
-        <div class="col-auto"><strong>Email:</strong> fiorellatrigo@gmail.com</div>
-        <div class="col-auto"><strong>Phone:</strong> +54 9 11 66 46 33 87</div>
+
+      <h2 class="display-4">Contact Me</h2>
+
+      <div class="row justify-content-center mb-4">
+        <div class="col-12 col-md-5 contact-info mb-3">
+          📧 fiorellatrigo@gmail.com
+        </div>
+        <div class="col-12 col-md-5 contact-info mb-3">
+          📞 +54 9 11 66 46 33 87
+        </div>
       </div>
-      <div class="row justify-content-center">
-        <div class="col-4 col-md-2">
-          <a href="https://linkedin.com/in/fiorella-trigo/" target="_blank" class="text-decoration-none">
-            <div class="social-icon"><img src="icons/linkedin.png" alt="LinkedIn"></div>
+
+      <div class="row justify-content-center social-icons">
+
+        <div class="col-6 col-md-2">
+          <a href="https://www.linkedin.com/in/fiorella-trigo/" target="_blank">
+            <div class="social-icon">
+              <img src="icons/linkedin.png" alt="LinkedIn">
+            </div>
             <div class="social-label">LinkedIn</div>
           </a>
         </div>
+
+        <div class="col-6 col-md-2">
+          <a href="https://github.com/fiorellatrigo" target="_blank">
+            <div class="social-icon">
+              <img src="icons/github.png" alt="GitHub">
+            </div>
+            <div class="social-label">GitHub</div>
+          </a>
         </div>
+
+      </div>
+
     </div>
   </footer>
 
