@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio - About</title>
+
+  <!-- Bootstrap CSS -->
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet"
+  >
+
+  <!-- Custom CSS (same file as requested) -->
+  <style>
+    /* Sticky Navbar Styling */
+    .custom-navbar {
+    background-color: #f8e4ff;
+    padding: 15px 0;
+    z-index: 1000;
+    }
+
+    .custom-navbar .navbar-brand,
+    .custom-navbar .nav-link {
+    color: #c5a3d2;
+    font-weight: 500;
+    }
+
+    .custom-navbar .nav-link:hover {
+    color: #a57bb8;
+    }
+
+    /* Smooth scrolling */
+    html {
+    scroll-behavior: smooth;
+    }
+
+    /* Prevent sections from hiding behind navbar */
+    section {
+    scroll-margin-top: 90px;
+    }
+
+    /* ABOUT SECTION */
+    #about {
+      padding: 100px 0;
+    }
+
+    #about h2 {
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .about-image {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      background-color: #9e9e9e; /* fallback if image doesn't load */
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #333;
+      margin-bottom: 1.5rem;
+    }
+
+    /* PROJECTS SECTION */
+    .project-card {
+    background-color: #ffffff;
+    border-radius: 1.25rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+    }
+
+    .project-card img {
+    border-top-left-radius: 1.25rem;
+    border-top-right-radius: 1.25rem;
+    }
+
+    /* Buttons spacing */
+    .project-buttons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.75rem;
+    }
+    
+    /* SKILLS SECTION */
+    #skills {
+    padding: 100px 0;
+    }
+
+    .skill-item img {
+    width: 90px;
+    height: auto;
+    margin-bottom: 1.5rem;
+    }
+
+    .skill-item h5 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    }
+
+    .skill-item p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #333;
+    }
+    
+    /* CONTACT SECTION */
+    #contact {
+    background-color: #f8e4ff;
+    padding: 60px 0;
+    }
+
+    #contact h2 {
+    font-weight: 800;
+    color: #c5a3d2;
+    margin-bottom: 3rem;
+    }
+
+    .contact-info {
+    color: #c5a3d2;
+    font-size: 1.2rem;
+    }
+
+    .contact-info i {
+    margin-right: 0.5rem;
+    }
+
+    .social-icons {
+    margin-top: 3rem;
+    }
+
+    .social-icons a {
+    text-decoration: none;
+    }
+
+    .social-icon {
+    width: 70px;
+    height: 70px;
+    background-color: #c5a3d2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.75rem;
+    }
+
+    .social-icon img {
+    width: 32px;
+    height: 32px;
+    }
+
+    .social-label {
+    color: #c5a3d2;
+    font-weight: 600;
+    }
+
+  </style>
+</head>
+
+<body>
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#home">Fiorella Trigo</a>
+
+        <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        >
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav gap-3">
+            <!--<li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+            </li>-->
+            <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+            </li>
+        </ul>
+        </div>
+    </div>
+    </nav>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <div class="container text-center">
+
+      <!-- Title -->
+      <h2 class="display-4 mb-5">About me</h2>
+
+      <!-- Image -->
+      <div class="mb-5">
+        <img
+          src="images/about/1.png"
+          alt="Personal photo"
+          class="about-image rounded-4 img-fluid"
+        >
+      </div>
+
+      <!-- Text -->
+      <div class="row justify-content-center">
+        <div class="col-lg-8 about-text">
+
+          <p>
+            I’m a Junior Data Scientist with hands-on training in data analysis, statistics, and exploratory data analysis, working on end-to-end projects using Python (pandas, NumPy) and real-world datasets. I enjoy structuring messy data, identifying patterns, and turning analysis into clear, actionable insights.
+          </p>
+          <p>
+            My background is non-traditional and international, which has shaped how I work: I possess strong analytical thinking, am highly adaptable, pay close attention to detail, and have the ability to work autonomously in remote, multicultural environments. I learn best by solving real problems and iterating through data-driven workflows.
+          </p>
+          <p>
+            When I’m not diving deeper into Data Science, you’ll probably find me marathon-reading romance or fantasy books, teaching English, or spending time outdoors. Those spaces keep me curious, focused, and grounded.
+          </p>   
+        </div>
+      </div>
+
+    </div>
+  </section>
+<section id="projects">
+  <div class="container text-center">
+
+    <!-- Section Title -->
+    <h2 class="display-4 fw-bold mb-5">Projects</h2>
+
+    <!-- Projects Grid -->
+    <div class="row g-5 justify-content-center">
+
+      <!-- Project 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card project-card h-100">
+          <img src="images/projects/1.png" class="card-img-top" alt="Project 1">
+          <div class="card-body">
+            <h5 class="card-title">Video Game Industry Analysis: Strategic Insights for 2017</h5>
+            <p class="card-text">
+              This project performs a comprehensive data analysis for the online store Ice, which 
+              sells video games globally. The primary objective is to identify patterns that 
+              determine whether a game will be successful or not, enabling the store to plan its 
+              advertising budget and strategic inventory for the upcoming year (2017).
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/fiorellatrigo/video_game_market_analysis_2017/blob/main/README.md">Project Overview</a> | <a href="https://github.com/fiorellatrigo/video_game_market_analysis_2017">Source Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card project-card h-100">
+          <img src="images/projects/2.png" class="card-img-top" alt="Project 2">
+          <div class="card-body">
+            <h5 class="card-title">Project 2</h5>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed
+              nisl erat. Sed et purus ornare, eleifend tellus ut, fermentum arcu.
+              Maecenas lacinia scelerisque arcu a eleifend.
+            </p>
+            <div class="project-links">
+              <a href="#">Blog Post</a> | <a href="#">Source Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card project-card h-100">
+          <img src="images/projects/3.png" class="card-img-top" alt="Project 3">
+          <div class="card-body">
+            <h5 class="card-title">Project 3</h5>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed
+              nisl erat. Sed et purus ornare, eleifend tellus ut, fermentum arcu.
+              Maecenas lacinia scelerisque arcu a eleifend.
+            </p>
+            <div class="project-links">
+              <a href="#">Blog Post</a> | <a href="#">Source Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section id="skills">
+  <div class="container text-center">
+
+    <!-- Section Title -->
+    <h2 class="display-4 fw-bold mb-5">Skills</h2>
+
+    <!-- Skills Grid -->
+    <div class="row g-5">
+
+      <!-- Skill 1 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="skill-item">
+          <img src="images/skills/1.png" alt="Python icon">
+          <h5>Python</h5>
+          <p>
+            I use Python to clean, analyze, and explore data efficiently. I’m comfortable working with libraries like 
+            pandas and NumPy, writing clear scripts, and turning raw datasets into structured, usable information for analysis.
+          </p>
+        </div>
+      </div>
+
+      <!-- Skill 2 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="skill-item">
+          <img src="images/skills/2.png" alt="Data Visualization icon">
+          <h5>Data Visualization</h5>
+          <p>
+            I create clear and meaningful visualizations that help data tell a story. I use charts and dashboards 
+            to highlight patterns, trends, and insights, making complex information easy to understand for both 
+            technical and non-technical audiences.
+          </p>
+        </div>
+      </div>
+
+      <!-- Skill 3 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="skill-item">
+          <img src="images/skills/3.png" alt="SQL icon">
+          <h5>SQL</h5>
+          <p>
+            I use SQL to query, filter, and aggregate data from relational databases. I’m confident writing joins,
+             subqueries, and grouped analyses to extract exactly the data needed for exploration and decision-making.
+          </p>
+        </div>
+      </div>
+
+      <!-- Skill 4 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="skill-item">
+          <img src="images/skills/4.png" alt="Data Storytelling icon">
+          <h5>Data Storytelling</h5>
+          <p>
+            I focus on explaining insights in a clear and engaging way. I translate data results into 
+            narratives that answer real questions, support decisions, and connect numbers to real-world context.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section id="contact">
+  <div class="container text-center">
+
+    <!-- Section Title -->
+    <h2 class="display-4">Contact Me</h2>
+
+    <!-- Contact Details -->
+    <div class="row justify-content-center mb-4">
+      <div class="col-md-4 contact-info mb-3">
+        📧 fiorellatrigo@gmail.com
+      </div>
+      <div class="col-md-4 contact-info mb-3">
+        📞 +54 9 11 66 46 33 87
+      </div>
+    </div>
+
+    <!-- Social Icons -->
+    <div class="row justify-content-center social-icons">
+
+      <!-- LinkedIn -->
+      <div class="col-6 col-md-2">
+        <a href="https://www.linkedin.com/in/fiorella-trigo/" target="_blank">
+          <div class="social-icon">
+            <img src="icons/linkedin.png" alt="LinkedIn">
+          </div>
+          <div class="social-label">LinkedIn</div>
+        </a>
+      </div>
+
+      <!-- GitHub -->
+      <div class="col-6 col-md-2">
+        <a href="https://github.com/fiorellatrigo" target="_blank">
+          <div class="social-icon">
+            <img src="icons/github.png" alt="GitHub">
+          </div>
+          <div class="social-label">GitHub</div>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
