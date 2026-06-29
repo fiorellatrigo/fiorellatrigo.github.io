@@ -276,18 +276,24 @@
       transform: translateY(-6px);
       box-shadow: 0 18px 35px rgba(0, 0, 0, 0.09);
     }
-    /* Cambiado: Ajuste proporcional para que se vea el gráfico entero sin cortarse */
-    .project-card img {
+   /* Nuevo contenedor para la parte superior terracota */
+    .project-image-wrapper {
+      background: linear-gradient(135deg, #cc7351 0%, #b86242 100%);
       border-top-left-radius: 1.25rem;
       border-top-right-radius: 1.25rem;
+      padding: 20px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 180px; /* Controla la altura de la cabecera terracota */
+    }
+    /* Ajuste de la imagen dentro del contenedor */
+    .project-card .project-thumb {
       width: 100%;
-      max-width: 280px; /* Limita el ancho del gráfico */
-      height: 160px;       /* Altura controlada para mantener la proporción de la ficha */
-      object-fit: contain; /* Mantiene el gráfico entero sin recortarse */
-     /* Cambiado: Gradiente lineal que va desde el tono de mi paleta hacia blanco de forma suave */
-      background-image: linear-gradient(to bottom, #f7f1ed 0%, #ffffff 100%);
-      margin: 0 auto;
-      padding: 10px;     /* Margen interno para que el gráfico no toque los bordes */
+      height: 100%;
+      object-fit: contain; /* Encoge el gráfico proporcionalmente */
+      border-radius: 8px;  /* Bordes suaves opcionales para los gráficos */
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.08)); /* Le da un relieve sutil sobre el fondo */
     }
     .project-links .btn-outline-primary {
       color: #cc7351;
@@ -573,9 +579,13 @@
         <!-- Project 5 -->
         <div class="col-md-6 col-lg-4">
           <div class="card project-card h-100">
-            <a href="#" data-bs-toggle="modal" data-bs-target="#project5Modal">
-              <img src="images/projects/5.png" class="card-img-top" alt="Wind Power Prediction BoxPlot">
-            </a>
+            <!-- Contenedor Terracota que cubre todo el ancho -->
+            <div class="project-image-wrapper">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#project5Modal" class="w-100 h-100 d-flex justify-content-center">
+                <img src="images/projects/5.png" class="project-thumb" alt="Wind Power Prediction">
+              </a>
+            </div>
+            
             <div class="card-body d-flex flex-column justify-content-between text-center">
               <div>
                 <h5 class="card-title fw-bold">Wind Energy Prediction</h5>
