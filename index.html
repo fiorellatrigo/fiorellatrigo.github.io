@@ -276,11 +276,17 @@
       transform: translateY(-6px);
       box-shadow: 0 18px 35px rgba(0, 0, 0, 0.09);
     }
+    /* Cambiado: Ajuste proporcional para que se vea el gráfico entero sin cortarse */
     .project-card img {
       border-top-left-radius: 1.25rem;
       border-top-right-radius: 1.25rem;
-      height: 140px;
-      object-fit: cover;
+      width: 100%;
+      max-width: 280px; /* Limita el ancho del gráfico */
+      height: 180px;     /* Altura fija controlada */
+      object-fit: contain; /* Encoge el gráfico completo proporcionalmente */
+      background-color: #fcfaf7; /* Fondo neutro para rellenar si las medidas varían */
+      margin: 0 auto;
+      padding: 10px;     /* Margen interno para que el gráfico no toque los bordes */
     }
     .project-links .btn-outline-primary {
       color: #cc7351;
@@ -632,7 +638,7 @@
             </div>
           </div>
         </div>
-        
+
         <!-- Project 1 -->
         <div class="col-md-6 col-lg-5">
           <div class="card project-card h-100">
