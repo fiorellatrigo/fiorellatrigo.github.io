@@ -168,11 +168,13 @@
       text-align: center;
       border-top: 5px solid #cc7351;
     }
-    /* Contenedor relativo para posicionar elementos encima */
+    /* Contenedor relativo para agrupar y posicionar los elementos */
     .profile-img-container {
       position: relative;
       display: inline-block;
+      margin-bottom: 2rem; /* Reemplaza el margen que tenía el div anterior */
     }
+    /* Tamaño de la imagen ampliado para coincidir con el diseño de referencia */
     .about-image {
       width: 240px;
       height: 240px;
@@ -181,13 +183,13 @@
       border: 4px solid #fcefe9;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
-    /* Badge posicionado absolutamente en la base de la imagen */
+    /* Badge posicionado de forma absoluta respecto a su contenedor */
     .badge-title {
       position: absolute;
-      bottom: -15px; /* Lo empuja hacia abajo para que quede justo a la mitad */
+      bottom: -12px; /* Lo empuja hacia abajo para montarse sobre el borde inferior */
       left: 50%;
-      transform: translateX(-50%); /* Lo centra perfectamente horizontal */
-      white-space: nowrap; /* Evita que el texto se quiebre en múltiples líneas */
+      transform: translateX(-50%); /* Lo centra horizontalmente de manera matemática */
+      white-space: nowrap; /* Garantiza que el texto se mantenga en una sola línea */
       background: linear-gradient(135deg, #df9e38, #ecbe57);
       color: #ffffff;
       padding: 0.4rem 1.5rem;
@@ -196,7 +198,7 @@
       font-weight: 600;
       letter-spacing: 0.5px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-      z-index: 2;
+      z-index: 2; /* Asegura que flote por encima del borde de la foto */
     }
     .profile-card h2 {
       font-size: 1.5rem;
@@ -526,8 +528,7 @@
 
         <!-- Right Column: Profile Card -->
         <aside class="profile-card">
-          <!-- Contenedor relativo para agrupar la foto y el badge superpuesto -->
-          <div class="profile-img-container mb-4">
+          <div class="profile-img-container">
             <img src="images/about/1.png" alt="Fiorella Trigo" class="about-image rounded-circle img-fluid">
             <div class="badge-title">Data Scientist</div>
           </div>
