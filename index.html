@@ -890,30 +890,38 @@
         <div class="tab-pane fade" id="kaggle-competitions" role="tabpanel" aria-labelledby="kaggle-tab">
           <div class="row g-4 justify-content-center">
 
-            <!-- Competencia Ejemplo 1 -->
+            <!-- KAGGLE COMPETITION 2 -->
             <div class="col-md-6 col-lg-4">
               <div class="card project-card h-100">
                 <div class="project-image-wrapper">
-                  <img src="images/projects/5.png" class="project-thumb" alt="Kaggle Competition 1">
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#kaggle1Modal" class="w-100 h-100 d-flex justify-content-center">
+                    <img src="images/projects/competitions/2.png" class="project-thumb" alt="Kaggle S6E9: EV Purchase Prediction">
+                  </a>
                 </div>
                 <div class="card-body d-flex flex-column justify-content-between text-center">
                   <div>
-                    <h5 class="card-title fw-bold">House Prices - Advanced Regression</h5>
+                    <h5 class="card-title fw-bold">Kaggle S6E9: EV Purchase Prediction</h5>
                     <div class="tech-stack mt-2 justify-content-center">
-                      <span class="badge-tech">LightGBM</span>
+                      <span class="badge-tech">Python</span>
                       <span class="badge-tech">XGBoost</span>
+                      <span class="badge-tech">LightGBM</span>
+                      <span class="badge-tech">Optuna</span>
                       <span class="badge-tech">Feature Engineering</span>
-                      <span class="badge-tech">Ensembling</span>
+                      <span class="badge-tech">Scikit-learn</span>
+                      <span class="badge-tech">TensorFlow</span>
                     </div>
                     <p class="card-text mt-3">
-                      Competitive machine learning pipeline incorporating advanced target encoding, outlier filtering, and a stacked ensemble of Gradient Boosting models.
+                      A competitive machine learning project predicting Electric Vehicle purchases. By applying domain-logic 
+                      feature engineering and aggressive feature pruning, I optimized an XGBoost baseline using Optuna, 
+                      outperforming Neural Networks and complex stacking ensembles.
                     </p>
-                    <div class="kaggle-metrics-box">
-                      <strong>Ranking / Metric:</strong> Top 5% | RMSLE: 0.1124
+                    <div class="project-results-box">
+                      <strong>Results:</strong> Demonstrated that streamlining features and fine-tuning hyperparameters 
+                      on an XGBoost model yielded a strong Public Leaderboard ROC AUC of 0.94178.
                     </div>
                   </div>
                   <div class="project-links mt-4">
-                    <a href="https://github.com/fiorellatrigo" target="_blank" class="btn btn-outline-primary btn-sm">View Notebook / Code</a>
+                    <a href="https://github.com/fiorellatrigo/kaggle-ev-purchase-prediction" target="_blank" class="btn btn-outline-primary btn-sm">View Project / GitHub Repo</a>
                   </div>
                 </div>
               </div>
